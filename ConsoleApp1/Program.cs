@@ -11,13 +11,19 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             int a, b;
-            Console.WriteLine("Két szám összeadása! ");
-            Console.WriteLine("Adj meg 1 számot: ");
-            a =int.Parse(Console.ReadLine());
-            Console.WriteLine("Adj meg 1 másik számot: ");
-            b = int.Parse(Console.ReadLine());
-            Console.WriteLine("A két szám összege: " + (a+b));
+            Console.Write("Két szám összeadása! ");
+            a = szamotker("Adj meg 1 számot: ");
+            b = szamotker("Adj meg 1 másik számot: ");
+            Console.Write("A két szám összege: " + (a+b));
             Console.ReadKey();
+        }
+
+        private static int szamotker(string szo)
+        {
+            int bekertszam;
+            Console.Write(szo);
+            bekertszam = int.Parse(Console.ReadLine());
+            return bekertszam;
         }
     }
 }
